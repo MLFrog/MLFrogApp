@@ -1,4 +1,4 @@
-package com.mlfrog.domain.account;
+package com.mlfrog.domain.Account;
 
 public interface AccountRepository {
 
