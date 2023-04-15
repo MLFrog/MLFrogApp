@@ -1,0 +1,31 @@
+spring:
+  datasource:
+    h2:
+      driverClassName: org.h2.Driver
+      jdbcUrl: jdbc:h2:mem:userdb;DB_CLOSE_DELAY=-1
+      username: sa
+      password:
+    
+    #현재 DB가 없어서 임시로 choi로컬의 mariadb사용해서 연동해둠 추후 수정예정
+    mysql:
+      driverClassName: org.mariadb.jdbc.Driver
+      jdbcUrl: jdbc:mariadb://localhost:3306/mlfrog
+      username: mlfrog
+      password: 1234
+      
+  h2:
+    console:
+      enabled: true
+      path: /h2-console
+      
+  mvc:
+    pathmatch:
+      matching-strategy: ANT_PATH_MATCHER
+      
+  devtools:
+    restart:
+      enabled: true
+
+logging:
+  level:
+    root: info

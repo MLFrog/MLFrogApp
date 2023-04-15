@@ -1,7 +1,7 @@
 package com.mlfrog.presentation.View;
 
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 /*
@@ -12,14 +12,32 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class TestView {
 	
-	@RequestMapping("/")
+	/*
+	 * Vue 개발 전까지 사용할 임시 메인 페이지
+	 */
+	@GetMapping("/")
 	public String mainPage() {
-		return "Main 입니다";
+		StringBuilder links = new StringBuilder();
+		links.append("<center><h1>Main Page 입니다.</h1></center>"); 
+		links.append("<br><hr>");
+		links.append("<a href='/swagger-ui/index.html'>Swagger 바로가기</a>");
+		links.append("<br><hr>");
+		links.append("<a href='/h2-console/'>H2 DB 바로가기</a>");
+		links.append("<br><hr>");
+		return links.toString();
 	}
 	
-	@RequestMapping("/{id}")
+	@GetMapping("/{id}")
 	public String idTest(@PathVariable int id) {
 		return Integer.toString(id);
 	}
+	
+	/*
+	 * 쓸데없이 Error페이지를 내보내게 하고 있어서
+	 * 요청 무시하도록 설정
+	 */
+	@GetMapping("/favicon.ico")
+    public void handleFaviconRequest() {
+    }
 	
 }
