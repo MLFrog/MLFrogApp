@@ -2,7 +2,9 @@ package com.mlfrog.domain.Room;
 
 import org.junit.jupiter.api.Test;
 
-@sl
+import lombok.extern.slf4j.Slf4j;
+
+@Slf4j
 public class RoomTests {
 	
 	@Test
