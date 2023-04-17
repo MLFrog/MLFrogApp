@@ -35,3 +35,5 @@ out/
 
 ### VS Code ###
 .vscode/
+.dbeaver/credentials-config.json
+.dbeaver/data-sources.json
