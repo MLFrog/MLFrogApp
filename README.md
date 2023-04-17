@@ -25,3 +25,9 @@ url : localhost:8080/h2-console
 
 # Swagger
 url : localhost:8080/swagger-ui/index.html
+
+
+### 추가 작업 필요  
+레디스  
+Mybatis  
+JPA
