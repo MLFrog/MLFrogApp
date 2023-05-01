@@ -13,8 +13,8 @@ public class BoardId implements Serializable {
 
     private final long value;
 
-    static BoardId of(long value) {
-        return BoardId.of(value);
+    static BoardId of(int value) {
+        return BoardId.of((long) value);
     }
 
     @Override

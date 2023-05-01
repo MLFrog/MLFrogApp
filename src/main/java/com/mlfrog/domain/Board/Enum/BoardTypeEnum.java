@@ -1,4 +1,4 @@
-package com.mlfrog.domain.Board;
+package com.mlfrog.domain.Board.Enum;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
